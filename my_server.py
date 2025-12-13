@@ -26,10 +26,6 @@ def create_token():
 
 @app.route('/verify-token', methods=['POST'])
 def verify_token():
-    """
-    This endpoint checks if a token is valid.
-    Think of it like: Security guard checks if ticket is real
-    """
     data = request.get_json()
     token = data.get('uuid-token')
     
